@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int n;
+int niz[20];
+int brojac=0;
+cin>>n;
+pocetak:
+for (int i=0;i<n; i++){
+    cin>>niz[i];
+    if (!(niz[i]==0 || niz[i]==1)) goto pocetak;
+}
+
+for(int i=0; i<n; i++){
+
+if (niz[i]==niz[i+1]){
+    brojac++;
+    }
+}
+cout<<"Broj grupa je: "<<brojac<<endl;
+return 0;
+}
