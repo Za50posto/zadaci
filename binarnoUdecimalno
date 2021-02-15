@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main(){
+    int n;
+    cin >> n;
+    int decimalni_broj = 0, i = 0, ostatak;
+    while (n!=0){
+        ostatak = n % 10;
+        n /= 10;
+        decimalni_broj += ostatak*pow(2, i);
+        ++i;
+    }
+    cout << decimalni_broj;
+}
